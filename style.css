@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: o;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #ccc;
+}
+
+body{
+    font-family: 'montserrat' , sans-serif;
+    background-color: #181818;
+}
+
+nav{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+}
+
+.logo{
+    max-width: 100px;
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: rgb(172, 5, 5);
+    display: none;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link a{
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #fff;
+}
+
+.link a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(172, 5, 5);
+    transition: all 0.3s ease;
+}
+
+.link a:hover::after{
+    width: 75%;
+}
+
+.btn , .btn-t{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #ccc;
+    background-color: rgb(117, 5, 5);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-pro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover, .btn-t:hover{
+    background-color: rgb(172, 5, 5);
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.blur{
+    position: absolute;
+    box-shadow: 0 0 1000px 50px rgb(231, 15, 15);
+    z-index: -100;
+}
+
+header{
+    position: relative;
+    padding-top: 2rem;
+    align-items: center;
+}
+
+header .content h4{
+    margin-bottom: 1rem;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+header .content h1{
+    margin-bottom: 1rem;
+    color: #ccc;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 3rem;
+}
+
+header .content h1 span{
+    font-size: 2rem;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff;
+}
+
+header .content p{
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border: .2rem solid;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: rgb(94, 11, 5);
+    margin: 0.50rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.social-media a:hover {
+    background: red;
+    color:#020b1c;
+    box-shadow: 0 0 1rem;
+
+}
+
+section .header{
+    margin-bottom: 1rem;
+    color: #fff;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+.animate{
+    opacity: 0;
+    transition: all 0.8s ease-in-out;
+}
+
+.slide-up{
+    transform: translateY(50px);
+}
+.slide-up.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.slide-left {
+    transform: translateX(-50%);
+}
+.slide-left.visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.zoom-in {
+    transform: scale(0.8);
+}
+.zoom-in.visible{
+    transform: scale(1);
+    opacity: 1;
+}
+
+.skills{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+}
+
+.skills .card{
+    background-color: #27272a;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.skills .card:hover{
+    background-color: rgb(77, 24, 24);
+    border-color: #fff;
+}
+
+.skills .card span{
+    display: inline-block;
+    background-color: rgb(77, 24, 24);
+    color: #fff;
+    padding: 2px 9px;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+}
+
+.skills .card h4{
+    margin-bottom: 0.5rem;
+    color: #ccc;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.skills .card p{
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.skills .card a{
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.skills .card a:hover{
+    color: red;
+    cursor: pointer;
+}
+
+section .proj ul{
+    list-style: none;
+}
+
+section .proj ul li a{
+    text-decoration: underline;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+section .proj ul li a:hover{
+    color: rgb(241, 115, 115);
+}
+
+section .proj ul li p{
+    color: #ccc;
+    margin: 1rem;
+}
+
+.contact{
+    background-color: #ccc;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.contact-form {
+    background: #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-form button {
+    background-color: rgb(77, 24, 24);
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contact-form button:hover {
+    background-color: #b32400;
+}
+
+.social-links {
+    margin-top: 0;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.social-links a {
+    text-decoration: none;
+    color: rgb(77, 24, 24);
+    margin: 10px 0;
+    font-size: 1rem;
+}
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+
+footer{
+    background-color: #780116;
+    padding: 5px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: rgb(77, 24, 24);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem;
+}
+.footer-iconTop a i {
+    font-size: 1.4rem;
+    color: red;
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .skills {
+        display: grid;
+        grid-template-columns: repeat(2,2fr);
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 10px;
+    }
+
+    nav .btn {
+        margin-top: 10px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .social-media{
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    .contact{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        width: 100%;
+    }
+
+    .skills{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .skills .card {
+        margin-bottom: 20px;
+    }
+}
