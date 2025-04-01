@@ -18,6 +18,7 @@ body{
 }
 
 nav{
+    position: relative;
     max-width: 1200px;
     margin: auto;
     padding: 2rem 1rem;
@@ -36,6 +37,7 @@ nav{
     font-size: 3.6rem;
     color: rgb(172, 5, 5);
     display: none;
+    cursor: pointer;
 }
 
 .nav-links{

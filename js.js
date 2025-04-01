@@ -1,8 +1,14 @@
+const menuIcon = document.getElementById('menu-icon');
+const navbar = document.querySelector('nav');
 
+menuIcon.addEventListener('click', () => {
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('show');
+});
 
 //typed js
 const typed = new Typed('.multiple-text', {
-    strings: ['Web Developer', 'App Developer', 'Pentester', 'System Administrator'],
+    strings: ['Web Developer(full stack)', 'App Developer', 'Pentester' ,'Database Manager'],
     typedSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
@@ -47,5 +53,33 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     sections.forEach(section => {
         observer.observe(section);
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('.contact-form form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const message = formData.get('message');
+
+        const mailtoLink = `mailto:ryanmuthoni050@gmail.com?subject=Want to hire you&body=${encodeURIComponent(
+            `Name: ${name}\n` +
+            `Email: ${email}\n` +
+            `Message: ${message}`
+        )}`;
+
+        window.location.href = mailtoLink;
+    });
+
+    
+    const hireMeButton = document.querySelectorAll('.btn-t');
+    hireMeButton.forEach(button => {
+        button.addEventListener('click', function() {
+            document.querySelector('.contact-form').scrollIntoView({ behavior: 'smooth' });
+        });
     });
 });
